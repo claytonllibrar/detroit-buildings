@@ -11,6 +11,7 @@
     "url": "git://github.com/claytonllibrar/detroit-buildings.git"
   },
     "dependencies": {
-    "Leaflet": "1.5.1"
+    "Leaflet": "1.5.1",
+    "Ouroboros": "https://github.com/WSULib/ouroboros/archive/v1.0.tar.gz"
     }
 }
