@@ -12,6 +12,6 @@
   },
     "devDependencies": {
     "Leaflet": "^1.5.1",
-    "ouroboros": "^1.0"
+    "wsulib/ouroboros": "^1.0"
     }
 }
