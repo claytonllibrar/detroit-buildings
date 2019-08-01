@@ -30,7 +30,7 @@
 			// Adds popup with info
 			function onEachFeature(feature,layer) {
 				var featureId = feature.properties.id;
-				var popupContent = "<h1><a href='https://digital.library.wayne.edu/item/wayne:"+featureId+"'>"+feature.properties.name+"</a></h1><img src='https://digital.library.wayne.edu/api/item/wayne:"+featureId+"/file/"+featureId+"_THUMBNAIL?key=w5ud0r' />";
+				var popupContent = "<h1><a href='https://digital.library.wayne.edu/item/wayne:"+featureId+"'>"+feature.properties.name+"</a></h1><img src='https://digital.library.wayne.edu/api/item/wayne:"+featureId+"/file/"+featureId+"_THUMBNAIL?key=######' />"; // An API key for the WSU libraries digital collections
 				if (feature.properties.notes) {
 					popupContent += "<p>"+feature.properties.notes+"</p>";
 				}
