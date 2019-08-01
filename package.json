@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git://github.com/claytonllibrar/detroit-buildings.git"
   },
-    "devDependencies": {
+    "dependencies": {
     "Leaflet": "^1.5.1",
     "WSULib/ouroboros": "^1.0"
     }
