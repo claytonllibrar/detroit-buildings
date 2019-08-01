@@ -1,0 +1,11 @@
+.vmcPopup img {
+	display: block;
+	max-width: 90%;
+}
+.vmcPopup h1 {
+	font-size: 1.1rem;
+}
+#mapid {
+	height: 90vh;
+	width: 90vw;
+}

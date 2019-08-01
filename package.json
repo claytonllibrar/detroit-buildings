@@ -1,0 +1,16 @@
+{
+  "name": "Detroit Buildngs",
+  "version": "0.1",
+  "description": "Using Leaflet to create a map of buildings in Detroit that appear in photographs in the Wayne State University Library's digital collections",
+  "author": {
+      "name": "Clayton Hayes",
+      "email": "claytonllibrar@gmail.com"
+    },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/claytonllibrar/detroit-buildings.git"
+  },
+    "devDependencies": {
+    "Leaflet": "^1.5.1"
+    }
+}
