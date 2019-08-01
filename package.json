@@ -12,6 +12,6 @@
   },
     "dependencies": {
     "Leaflet": "1.5.1",
-    "WSULib/ouroboros": "1.0"
+    "Ouroboros": "1.0"
     }
 }
