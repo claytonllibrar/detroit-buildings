@@ -4,24 +4,28 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Detroit Buildings</title>
-		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
-		<link rel="stylesheet" type="text/css" href="detroit-buildings.css">
-		<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
-		<script type="text/javascript" src="https://stamen-maps.a.ssl.fastly.net/js/tile.stamen.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+			integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+			crossorigin=""/>
+		<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+			integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+			crossorigin=""></script>
+		<link rel="stylesheet" type="text/css" href="detroitBuildings.css">
 	</head>
 	<body>
 		<div id="mapid"></div>
-		<script type="text/javascript" src="detroit-buildings.js"></script>
+		<script type="text/javascript" src="detroitBuildings.js"></script>
 		<script type="text/javascript">
-			var layer = new L.StamenTileLayer("toner");
+			var layer = new L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner/{z}/{x}/{y}{r}.png');
 			var map = new L.Map("mapid", {
 				center: new L.LatLng(42.35, -83.1),
+				attribution: '&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a> <a href="https://stamen.com/" target="_blank">&copy; Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>',
 				zoom: 12
 			});
 			map.addLayer(layer);
 
 			var bldgIcon = L.icon({
-				iconUrl: "bldg-icon.svg",
+				iconUrl: "bldgIcon.svg",
 				iconSize: [21,21],
 				iconAnchor: [11,11],
 				popupAnchor: [0,-11]
@@ -30,7 +34,7 @@
 			// Adds popup with info
 			function onEachFeature(feature,layer) {
 				var featureId = feature.properties.id;
-				var popupContent = "<h1><a href='https://digital.library.wayne.edu/item/wayne:"+featureId+"'>"+feature.properties.name+"</a></h1><img src='https://digital.library.wayne.edu/api/item/wayne:"+featureId+"/file/"+featureId+"_THUMBNAIL?key=######' />"; // An API key for the WSU libraries digital collections
+				var popupContent = "<h1><a href='https://wayne.contentdm.oclc.org/digital/collection/vmc/id/"+featureId+"/rec/1'>"+feature.properties.name+"</a></h1><img src='https://wayne.contentdm.oclc.org/digital/api/singleitem/image/vmc/"+featureId+"/default.jpg' />";
 				if (feature.properties.notes) {
 					popupContent += "<p>"+feature.properties.notes+"</p>";
 				}
