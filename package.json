@@ -5,12 +5,12 @@
   "author": {
       "name": "Clayton Hayes",
       "email": "hi.its.clayton@gmail.com"
-    },
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/helloitsclayton/detroitBuildings.git"
   },
-    "dependencies": {
+  "dependencies": {
     "Leaflet": "^1.9.4"
-    }
+  }
 }
